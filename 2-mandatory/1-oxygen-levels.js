@@ -11,7 +11,15 @@
     Some string methods that might help you here are .replace() and .substring(). 
 */
 
-function safeLevels() {}
+function safeLevels(arr) {
+  let toNum = arr.map(val => parseFloat(val.replace('%','')));
+  
+  for (let i=0; i<toNum.length; i++) {
+    if (toNum[i] > 19.5  && toNum[i] < 23.5) {
+      return arr[i];
+    }
+  }
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

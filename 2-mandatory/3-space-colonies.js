@@ -15,7 +15,9 @@
   
 */
 
-function colonisers() {}
+function colonisers(arr) {
+  return arr.filter(val => val[0] === 'A' && val.includes('family'));
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 

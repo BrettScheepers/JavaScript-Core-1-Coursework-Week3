@@ -25,6 +25,15 @@ PasswordValidationResult=  [false, false, false, false, true]
 */
 
 function validatePasswords(passwords) {
+    let validationResult = [];
+
+    passwords.forEach( el => {
+        if (el.length >= 5 && containsUppercaseLetter(el) && containsLowercaseLetter(el) && containsNumber(el) && containsSymbol(el)) {
+            validationResult.push(true);
+        } else validationResult.push(false);
+    });
+
+    return validationResult;
 }
 
 // Returns true if string contains at least one uppercase letter.
